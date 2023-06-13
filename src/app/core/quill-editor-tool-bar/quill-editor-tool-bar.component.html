@@ -1,0 +1,17 @@
+<div class="ql-formats" *ngFor="let group of groups">
+    <ng-container *ngFor="let item of group" [ngSwitch]="item.type">
+        <ng-container *ngSwitchCase="ToolBarItemType.button">
+            <lpc-quill-tool-bar-item-button [item]="item"
+                                            *ngIf="item.name !== 'link'; else link"></lpc-quill-tool-bar-item-button>
+            <ng-template #link>
+                <lpc-quill-tool-bar-item-link [item]="item"></lpc-quill-tool-bar-item-link>
+            </ng-template>
+        </ng-container>
+        <lpc-quill-tool-bar-item-picker [item]="item"
+                                        *ngSwitchCase="ToolBarItemType.picker"></lpc-quill-tool-bar-item-picker>
+        <lpc-quill-tool-bar-item-select [item]="item"
+                                        *ngSwitchCase="ToolBarItemType.select"></lpc-quill-tool-bar-item-select>
+        <lpc-quill-tool-bar-item-color [item]="item"
+                                       *ngSwitchCase="ToolBarItemType.color"></lpc-quill-tool-bar-item-color>
+    </ng-container>
+</div>

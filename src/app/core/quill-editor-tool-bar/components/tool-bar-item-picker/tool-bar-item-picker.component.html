@@ -1,0 +1,18 @@
+<button [matMenuTriggerFor]="menu"
+        mat-icon-button
+        color="primary"
+        [title]="item.title() | titlecase"
+        [class]="isActive ? 'ql-active' : ''">
+    <mat-icon class="lpc-icon lpc-icon-16"
+              [svgIcon]="'lpc:lpc-quill-' + item.name + (!currentValue ? '' : ('-' + currentValue))"></mat-icon>
+</button>
+<mat-menu #menu="matMenu" class="lpc-quill-toolbar-panel">
+    <button mat-menu-item
+            *ngFor="let op of options"
+            (click)="onSelectionChange(op)">
+        <mat-icon class="lpc-icon lpc-icon-16" [svgIcon]="'lpc:lpc-quill-' + item.name + (op ? '-'+op : '')"></mat-icon>
+    </button>
+</mat-menu>
+<select #qlSelect [class]="'ql-'+item.name" [style.display]="'none'">
+    <option *ngFor="let op of options" [attr.value]="op ? op : null"></option>
+</select>

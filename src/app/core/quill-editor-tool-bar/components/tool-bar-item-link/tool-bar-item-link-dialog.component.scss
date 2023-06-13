@@ -1,0 +1,16 @@
+.field-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.field-label {
+    font-size: 14px;
+    margin-right: 20px;
+}
+
+:host ::ng-deep {
+    .mat-form-field-appearance-legacy .mat-form-field-wrapper {
+        padding-bottom: 0;
+    }
+}

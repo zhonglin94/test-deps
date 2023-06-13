@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Create Link</h1>
+<div class="field-wrapper">
+    <div class="field-label">Address</div>
+    <mat-form-field>
+        <input matInput [formControl]="formControl" autofocus (keyup.enter)="onSaveClick()"/>
+        <button *ngIf="formControl.value" matSuffix mat-icon-button aria-label="Clear" (click)="onClear()">
+            <mat-icon svgIcon="sdo:close"></mat-icon>
+        </button>
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button mat-raised-button (click)="onCancelClick()">Cancel</button>
+    <button mat-button mat-raised-button color="primary" (click)="onSaveClick()" [disabled]="formControl.invalid">Save
+    </button>
+</div>

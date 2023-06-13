@@ -1,0 +1,15 @@
+
+:host {
+    padding: 0 !important;
+    border: 1px solid var(--sdo-theme-foreground-divider);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+
+    .ql-formats {
+        display: flex;
+        align-items: center;
+    }
+
+
+}
