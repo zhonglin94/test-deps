@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserModule } from '@angular/platform-browser';
+import { Feature1Module } from '../common/public-api';
 
 import { AppComponent } from './app.component';
 
@@ -10,7 +11,8 @@ import { AppComponent } from './app.component';
 	],
 	imports: [
 		BrowserModule,
-		MatButtonModule
+		MatButtonModule,
+		Feature1Module
 	],
 	providers: [],
 	bootstrap: [AppComponent]

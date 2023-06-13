@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ApiEndpointsService } from '@sdo/liveproduct-view-common';
 
 @Component({
 	selector: 'app-root',
@@ -8,7 +7,4 @@ import { ApiEndpointsService } from '@sdo/liveproduct-view-common';
 })
 export class AppComponent {
 	title = 'test-deps';
-
-	constructor(private ApiEnd: ApiEndpointsService) {
-	}
 }
