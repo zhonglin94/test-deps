@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:source-map": "ng build --source-map",
-    "source-map-explorer": "source-map-explorer dist/test-deps/**/*.js"
+    "source-map-explorer": "source-map-explorer dist/test-deps/**/*.js",
+    "source-map: pipeline": "npm run build:source-map && npm run source-map-explorer"
   },
   "private": true,
   "dependencies": {
