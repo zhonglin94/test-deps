@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { camelizeKeys, pascalizeKeys } from 'humps';
-import { cloneDeep } from 'lodash';
+import Quill from 'quill';
 
 @Component({
 	selector: 'app-feature2',
@@ -12,9 +11,8 @@ export class Feature2Component implements OnInit {
 	}
 
 	ngOnInit(): void {
-		camelizeKeys();
-		pascalizeKeys();
-		cloneDeep();
+		const node = getSelection().focusNode.parentNode;
+		const linkBlot = Quill.find(node);
 	}
 
 }
